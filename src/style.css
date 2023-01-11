@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Fraunces';
+  src: local('Fraunces'), url('/fonts/Fraunces-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: local('Fraunces'), url('/fonts/Fraunces-VariableItalic.ttf') format('truetype');
+  font-style: italic;
+}
