@@ -1,18 +1,20 @@
 import { createApp } from 'vue'
 import '@/style.css'
-import 'v-calendar/dist/style.css'
 import App from '@/App.vue'
 import router from '@/router'
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { IoLogoGithub, IoMoon } from "oh-vue-icons/icons";
+import { IoLogoGithub, IoMoon, BiApple, BiDiscord } from "oh-vue-icons/icons";
 
-import VCalendar from 'v-calendar';
+import titleMixin from './mixins/titleMixin';
 
-addIcons(IoLogoGithub, IoMoon);
+
+addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord);
+
+
 
 createApp(App)
+  .mixin(titleMixin)
   .use(router)
-  .use(VCalendar)
   .component('v-icon', OhVueIcon)
   .mount('#app')
