@@ -25,7 +25,7 @@ export default {
       <Navbar />
       <!-- Main -->
       <div class="lg:px-4 py-4">
-        <h1 class="winterfest-title font-semibold text-4xl lg:text-6xl md:text-8xl">
+        <h1 class="winterfest-title font-semibold text-4xl lg:text-8xl md:text-6xl">
           Winterfest 1.x
         </h1>
         <h2 class="text-end font-bold text-2xl lg:text-4xl text-[#096cde]">2023</h2>
@@ -40,13 +40,13 @@ export default {
         <div class="pt-5 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
           <ColCards
             class="p-6"
-            title="3 Days"
+            title="24 Hours"
             description="5 Submissions per problem. Solving all 4 problems earns a raffle for an extra $10 gift card. 🤫"
           />
           <ColCards
             class="p-6"
             title="$60 in prizes"
-            description="First place wins a $20 Steam Gift Card, Second place wins a $15 Amazon gift card, and Third place wins a $10 Timmies gift card."
+            description="First place wins a $20 Steam Gift Card, Second place wins one month of Xbox Ultimate Game Pass, and Third place wins a $10 Timmies gift card."
           />
           <ColCards
             class="p-6"
@@ -60,19 +60,19 @@ export default {
           <ImageCards
             class="p-6"
             title="First Place"
-            description="Buy your favourite games on Steam with this $20 gift card."
+            description="Buy your favourite games on Steam."
             image="https://www.thesource.ca/medias/8042411xl-mediaConversion-original-2-mediaConversion-640-x-480-mediaConversion-400-x-300-0?context=bWFzdGVyfGltYWdlc3w1NDUwMHxpbWFnZS9qcGVnfGltYWdlcy9oMGIvaGIzLzg4MjQ1ODY4Mjk4NTQuanBnfGU4NzM4MDg4YWFhMmUwZmFiNTQwM2Q4ZDVhMmM3YTUyMDkyY2IzYTk2ZDU3NDU4NzkwYjg0MjQxYmIwNGM0NzA"
           />
           <ImageCards
             class="p-6"
             title="Second Place"
-            description="Find something nice on Amazon with this $15 gift card."
+            description="Have 1 month of Xbox Game Pass Ultimate."
             image="https://media.cnn.com/api/v1/images/stellar/prod/201202111436-xbox-game-pass.jpg?q=x_0,y_0,h_900,w_1599,c_fill,g_auto"
           />
           <ImageCards
             class="p-6"
             title="Third Place"
-            description="Warm yourself up with a hot beverage from Timmies with this $10 gift card."
+            description="Warm yourself up with a hot beverage from Timmies."
             image="https://company.timhortons.com/ca/images/en/goc-confirm-tim-card.png"
           />
         </div>

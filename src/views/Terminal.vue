@@ -56,7 +56,7 @@
               have any questions, feel free to reach out to us on discord!
               <br />
               <br />
-              <strong class="text-[#84ffff]">STARTING Feb. 1 - Feb 3, 2023</strong>
+              <strong class="text-[#84ffff]">STARTING on Feb 3, 2023</strong>
             </samp>
           </div>
         </div>
