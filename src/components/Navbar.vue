@@ -1,8 +1,19 @@
 <script lang="ts">
 import { IoLogoGithub, IoMoon } from "oh-vue-icons/icons";
+import { Navbar, NavbarLogo, NavbarCollapse, NavbarLink } from "flowbite-vue";
 
 export default {
-  components: { IoLogoGithub, IoMoon },
+  components: { IoLogoGithub, IoMoon, Navbar, NavbarLogo, NavbarCollapse, NavbarLink },
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
+  },
 };
 </script>
 
@@ -23,6 +34,7 @@ export default {
         >
       </a>
       <button
+        @click="toggleMenu()"
         data-collapse-toggle="navbar-default"
         type="button"
         class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -44,7 +56,11 @@ export default {
           ></path>
         </svg>
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <div
+        class="w-full md:block md:w-auto"
+        :class="showMenu ? 'block' : 'hidden'"
+        id="navbar-default"
+      >
         <ul
           class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
         >
@@ -57,7 +73,7 @@ export default {
           </li>
           <li>
             <a
-              href="#"
+              href="/dashboard"
               class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >Dashboard</a
             >
@@ -67,6 +83,13 @@ export default {
               href="#"
               class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >Problems</a
+            >
+          </li>
+          <li>
+            <a
+              href="/register"
+              class="text-blue-600 block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >Begin</a
             >
           </li>
           <li>
