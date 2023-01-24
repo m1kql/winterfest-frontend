@@ -30,12 +30,12 @@
                     border="border-[#4285f4]"
                     text="text-[#4285f4]"
                   />
-                  <OAuthButton
+                  <!-- <OAuthButton
                     title="Sign In With Apple"
                     logo="./src/assets/images/apple_logo_black.svg"
                     border="border-[#1f1f1f]"
                     text="text-[#1f1f1f]"
-                  />
+                  /> -->
                 </div>
                 <div class="flex flex-row items-center justify-center space-x-4 py-6">
                   <div class="border-t-2 rounded-lg border-slate-200 w-full"></div>
