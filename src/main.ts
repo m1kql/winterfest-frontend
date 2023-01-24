@@ -6,12 +6,12 @@ import { VueFire, VueFireAuth } from "vuefire"
 import { app, auth } from "@/config/firebaseConfig"
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { IoLogoGithub, IoMoon, BiApple, BiDiscord } from "oh-vue-icons/icons";
+import { IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill } from "oh-vue-icons/icons";
 
 import titleMixin from './mixins/titleMixin';
 
 
-addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord);
+addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill);
 
 
 createApp(App)
