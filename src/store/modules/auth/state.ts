@@ -1,6 +1,8 @@
 export default {
-  user: null,
-  userName: String,
-  userEmail: String,
-  userUid: String,
+  user: {},
+  isLoggedIn: false,
+  userName: "",
+  userEmail: "",
+  userUid: "",
+  userToken: "",
 }
