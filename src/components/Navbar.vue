@@ -1,9 +1,35 @@
 <script lang="ts">
 import { IoLogoGithub, IoMoon } from "oh-vue-icons/icons";
 import { Navbar, NavbarLogo, NavbarCollapse, NavbarLink } from "flowbite-vue";
+import { store } from "@/store/index";
+import { onAuthStateChanged } from "@firebase/auth";
+import { auth } from "@/config/firebaseConfig";
+import { computed } from "vue";
 
 export default {
   components: { IoLogoGithub, IoMoon, Navbar, NavbarLogo, NavbarCollapse, NavbarLink },
+  setup() {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        store.dispatch("auth/setUser", user);
+      } else {
+        store.dispatch("auth/setUser", null);
+      }
+    });
+  },
+  computed: {
+    user() {
+      return store.getters["auth/getUser"];
+    },
+    isLoggedIn() {
+      const isLoggedIn = computed(() => store.getters["auth/getIsLoggedIn"]);
+      if (isLoggedIn.value === true) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
   data() {
     return {
       showMenu: false,
@@ -12,6 +38,18 @@ export default {
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu;
+      console.log(store.getters["auth/getIsLoggedIn"]);
+    },
+    logout() {
+      store
+        .dispatch("auth/logout")
+        .then(() => {
+          this.$router.push("/");
+        })
+        .then(() => {
+          console.log("Logged out");
+          console.log(store.getters["auth/getIsLoggedIn"]);
+        });
     },
   },
 };
@@ -66,7 +104,7 @@ export default {
         >
           <li>
             <a
-              href="#"
+              href="/"
               class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >Home</a
             >
@@ -78,19 +116,20 @@ export default {
               >Dashboard</a
             >
           </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Problems</a
-            >
-          </li>
-          <li>
+          <li v-if="!isLoggedIn">
             <a
               href="/login"
               class="text-blue-600 block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >Begin</a
             >
+          </li>
+          <li v-if="isLoggedIn">
+            <button
+              @click="logout"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            >
+              Logout
+            </button>
           </li>
           <li>
             <a href=""><v-icon class="hover:scale-125" name="io-logo-github"></v-icon></a>
