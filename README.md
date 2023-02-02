@@ -8,8 +8,28 @@ To get everything setup, jump to: [Vue 3 + Typescript + Vite](#vue-3-typescript-
 
 # TODO
 
-- [ ] Turn components into actual components (pass props)
-- [ ] make color something else
+> There will be no pages rendering user data.
+> Users can see other users on the leaderboard page, but they cannot see anything else about the user.
+
+- [ ] Insert problem statements into firebase database
+- [ ] Pages
+  - [ ] Finish the dashboard page 
+    - [ ] Show list of problems with difficulty tags and problem type tags
+      - [ ] Add in difficulty filtering (low priority)
+      - [ ] Add in tag filtering (low priority)
+      - [ ] Show user's points
+      - [ ] Show their rank
+  - [ ] Problem page
+    - [ ] Show problem statement
+    - [ ] Show past user submissions to problem
+    - [ ] Show people who have solved the problem
+    - [ ] Show problem status after submission
+  - [ ] Submission page
+    - [ ] Code editor
+    - [ ] Submission should redirect to problem page
+    - [ ] Make API request to JDoodle API/Judge0 API
+  - [ ] Leaderboard page
+    - [ ] Show list of users with points (users are not clickable)
 
 
 # Vue 3 + TypeScript + Vite
