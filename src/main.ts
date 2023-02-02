@@ -9,6 +9,7 @@ import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill } from "oh-vue-icons/icons";
 
 import titleMixin from './mixins/titleMixin';
+import { store } from './store';
 
 
 addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill);
@@ -17,6 +18,7 @@ addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRight
 createApp(App)
   .mixin(titleMixin)
   .use(router)
+  .use(store)
   .use(VueFire, {
     firebaseApp: app,
     modules: [
