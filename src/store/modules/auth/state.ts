@@ -5,4 +5,5 @@ export default {
   userEmail: "",
   userUid: "",
   userToken: "",
+  userPhotoUrl: "",
 }

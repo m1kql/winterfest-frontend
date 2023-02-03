@@ -8,9 +8,10 @@ import router from "@/router";
 export default {
   async setUser(context: any, user: any) {
     context.commit("SET_USER", user);
-    context.commit("SET_USER_NAME", user.name);
+    context.commit("SET_USER_NAME", user.displayName);
     context.commit("SET_USER_EMAIL", user.email);
     context.commit("SET_USER_UID", user.uid);
+    context.commit("SET_USER_PHOTO_URL", user.photoURL);
     context.commit("SET_IS_LOGGED_IN", true);
   },
   signInWithGoogle(context: any) {
@@ -20,6 +21,7 @@ export default {
       context.commit("SET_USER_NAME", result.user.displayName);
       context.commit("SET_USER_EMAIL", result.user.email);
       context.commit("SET_USER_UID", result.user.uid);
+      context.commit("SET_USER_PHOTO_URL", result.user.photoURL);
       context.commit("SET_IS_LOGGED_IN", true);
 
       const user = {
@@ -84,6 +86,7 @@ export default {
     context.commit("SET_USER_NAME", null);
     context.commit("SET_USER_EMAIL", null);
     context.commit("SET_USER_UID", null);
+    context.commit("SET_USER_PHOTO_URL", null);
     context.commit("SET_IS_LOGGED_IN", false);
   },
 

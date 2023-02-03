@@ -11,6 +11,9 @@ export default {
   SET_USER_UID(state: { userUid: any; }, payload: any) {
     state.userUid = payload;
   },
+  SET_USER_PHOTO_URL(state: { userPhotoUrl: any; }, payload: any) {
+    state.userPhotoUrl = payload;
+  },
   SET_IS_LOGGED_IN(state: { isLoggedIn: any; }, payload: any) {
     state.isLoggedIn = payload;
   },

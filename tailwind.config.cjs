@@ -9,6 +9,8 @@ module.exports = {
   theme: {
     fontFamily: {
       fraunces: ["Fraunces", "serif"],
+      mono: ["monospace"],
+
     },
     extend: {},
   },
