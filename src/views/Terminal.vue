@@ -31,7 +31,7 @@
               </strong>
 
               <br />
-              Winterfest is a 3-day competitive programming contest open to everyone.
+              Winterfest is a 5-day competitive programming contest open to everyone.
               <br />
               Have some fun, learn some new things, and win some prizes!
               <br />
@@ -56,7 +56,7 @@
               have any questions, feel free to reach out to us on discord!
               <br />
               <br />
-              <strong class="text-[#84ffff]">STARTING on Feb 3, 2023</strong>
+              <strong class="text-[#84ffff]">STARTING on Feb 6 - 10, 2023</strong>
             </samp>
           </div>
         </div>

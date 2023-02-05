@@ -55,7 +55,7 @@ export default {
             link="https://dmoj.ca/problemset"
           />
         </div>
-        <h1 class="text-4xl font-bold">Prizes</h1>
+        <!-- <h1 class="text-4xl font-bold">Prizes</h1>
         <div class="flex flex-col xl:flex-row pt-6">
           <ImageCards
             class="p-6"
@@ -75,7 +75,7 @@ export default {
             description="Warm yourself up with a hot beverage from Timmies."
             image="https://company.timhortons.com/ca/images/en/goc-confirm-tim-card.png"
           />
-        </div>
+        </div> -->
       </div>
       <div class="py-6">
         <div class="flex flex-row justify-center space-x-4">
