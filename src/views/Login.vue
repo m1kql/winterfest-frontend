@@ -26,7 +26,6 @@
                 <div class="flex flex-col space-y-4 pb-4">
                   <OAuthButton
                     title="Sign In With Google"
-                    logo="./src/assets/images/google_logo_g.svg"
                     border="border-[#4285f4]"
                     text="text-[#4285f4]"
                     @click="handleSignInWithGoogle"
