@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      fraunces: ["Fraunces", "serif"],
+      serif: ["serif"],
       mono: ["monospace"],
 
     },
