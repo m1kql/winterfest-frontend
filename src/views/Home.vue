@@ -38,11 +38,7 @@ export default {
           Up for the challenge?
         </h1>
         <div class="pt-5 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-          <ColCards
-            class="p-6"
-            title="24 Hours"
-            description="5 Submissions per problem. Solving all 4 problems earns a raffle for an extra $10 gift card. 🤫"
-          />
+          <ColCards class="p-6" title="5 Days" description="5 Submissions per problem." />
           <ColCards
             class="p-6"
             title="$60 in prizes"
