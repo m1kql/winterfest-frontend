@@ -51,14 +51,17 @@
                       >Email</label
                     >
                     <form @submit.prevent="handleSubmit" class="flex flex-row">
+                      <!-- placeholder="Enter your email address" -->
                       <input
+                        disabled
                         v-model="email"
                         id="email"
                         type="email"
                         name="email"
-                        placeholder="Enter your email address"
+                        placeholder="🚧 under works...disabled for now"
                         class="grow px-4 py-2 text-gray-700 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline-blue dark:focus:shadow-outline-gray"
                       />
+
                       <button type="button" disabled>
                         <v-icon
                           scale="2.5"
