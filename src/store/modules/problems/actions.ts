@@ -5,21 +5,31 @@ export default {
   async fetchProblems(context: any) {
     const db = useFirestore();
     const querySnapshot = await getDocs(collection(db, 'problems'));
-    const problems = [] as any[];
-    querySnapshot.forEach((doc) => {
-      problems.push(doc.data());
-    });
 
+    interface ProblemProps {
+      problemId: string;
+      problemTitle: string;
+      problemStatement: string;
+      sampleInput: string;
+      sampleOutput: string;
+      tags: string[];
+      points: number;
+      difficulty: 'easy' | 'medium' | 'hard' | 'advanced';
+    }
+
+    const problems = [] as ProblemProps[];
+    querySnapshot.forEach((doc) => {
+      problems.push({
+        problemId: doc.id,
+        problemTitle: doc.data().problem_title,
+        problemStatement: doc.data().problem_statement,
+        sampleInput: doc.data().sample_input,
+        sampleOutput: doc.data().sample_output,
+        tags: doc.data().tags,
+        points: doc.data().points,
+        difficulty: doc.data().difficulty
+      });
+    });
     context.commit('SET_PROBLEMS', problems);
   },
-  async fetchProblem(context: any, problemId: string) {
-    const db = useFirestore();
-    const problemRef = doc(db, 'problems', problemId);
-    const problem = await getDoc(problemRef);
-    if (problem.exists()) {
-      context.commit('SET_PROBLEM', problem);
-    } else {
-      console.log('No such document!');
-    }
-  }
 }

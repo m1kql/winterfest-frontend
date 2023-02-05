@@ -4,6 +4,7 @@ export default {
     problems.forEach((problem: any) => {
       state.problems.push({
         problemId: problem.id,
+        points: problem.points,
         problemTitle: problem.problemTitle,
         problemStatement: problem.problemStatement,
         sampleInput: problem.sampleInput,
@@ -17,6 +18,7 @@ export default {
   SET_PROBLEM(state: any, problem: any) {
     state.problem = {
       problemId: problem.id,
+      points: problem.points,
       problemTitle: problem.problemTitle,
       problemStatement: problem.problemStatement,
       sampleInput: problem.sampleInput,
