@@ -206,11 +206,12 @@ export default {
       const storage = getStorage();
       const submissionsRef = fireRef(
         storage,
-        `submissions/${problemId}/${id}/${language}/main${language.value}}`
+        `submissions/${problemId.value}/${id}/${language.value}/main.${language.ext}`
       );
       uploadBytes(submissionsRef, file).then((snapshot) => {
         console.log("Uploaded a blob or file!");
         console.log(snapshot.metadata.name);
+        this.$router.push("/dashboard");
       });
     },
     // makeApiCall(sourceCode: string, language: string, problem: string, input: string) {},
@@ -254,20 +255,20 @@ export default {
       { value: "p8", label: "Alexandru's pet tree 🌳" },
     ];
     const listBoxOptionsLang = [
-      { value: "CPP11", label: "C++ 11" },
-      { value: "CPP14", label: "C++ 14" },
-      { value: "JAVA8", label: "Java 8" },
-      { value: "JAVA", label: "Java" },
-      { value: "PYTHON", label: "Python" },
-      { value: "PYTHON3", label: "Python 3" },
-      { value: "C", label: "C" },
-      { value: "CSHARP", label: "C#" },
-      { value: "JAVASCRIPT_NODE", label: "JavaScript" },
-      { value: "GO", label: "Go" },
-      { value: "KOTLIN", label: "Kotlin" },
-      { value: "PHP", label: "PHP" },
-      { value: "RUBY", label: "Ruby" },
-      { value: "RUST", label: "Rust" },
+      { value: "CPP11", ext: ".cpp", label: "C++ 11" },
+      { value: "CPP14", ext: ".cpp", label: "C++ 14" },
+      { value: "JAVA8", ext: ".java", label: "Java 8" },
+      { value: "JAVA", ext: ".java", label: "Java" },
+      { value: "PYTHON", ext: ".py", label: "Python" },
+      { value: "PYTHON3", ext: ".py", label: "Python 3" },
+      { value: "C", ext: ".c", label: "C" },
+      { value: "CSHARP", ext: ".cs", label: "C#" },
+      { value: "JAVASCRIPT_NODE", ext: ".js", label: "JavaScript" },
+      { value: "GO", ext: ".go", label: "Go" },
+      { value: "KOTLIN", ext: ".kt", label: "Kotlin" },
+      { value: "PHP", ext: "php", label: "PHP" },
+      { value: "RUBY", ext: ".rb", label: "Ruby" },
+      { value: "RUST", ext: ".rs", label: "Rust" },
       { value: "SWIFT", ext: ".swift", label: "Swift" },
       { value: "SWIFT_4_1", ext: ".swift", label: "Swift 4.1" },
       { value: "HASKELL", ext: ".hs", label: "Haskell" },
