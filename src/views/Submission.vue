@@ -164,7 +164,7 @@ export default {
   data() {
     return {
       isDragging: false,
-      files: [],
+      files: [] as File[],
     };
   },
   components: {
