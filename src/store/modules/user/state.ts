@@ -14,6 +14,8 @@ export default {
   user_name: "",
   user_problems_solved: 0,
   user_points: 0,
+  user_photo_url: "",
+  temp_file_submission: {} as File,
   user_submissions: [
     {
       problem_id: "",

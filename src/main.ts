@@ -6,13 +6,15 @@ import { VueFire, VueFireAuth } from "vuefire"
 import { app, auth } from "@/config/firebaseConfig"
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill, BiChevronDown } from "oh-vue-icons/icons";
+import { IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill, BiChevronDown, BiCheck } from "oh-vue-icons/icons";
 
 import titleMixin from './mixins/titleMixin';
 import { store } from './store';
 
+import { VueReCaptcha } from 'vue-recaptcha-v3'
 
-addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill, BiChevronDown);
+
+addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRightSquareFill, BiChevronDown, BiCheck);
 
 
 createApp(App)
@@ -25,5 +27,6 @@ createApp(App)
       VueFireAuth(),
     ],
   })
+  .use(VueReCaptcha, { siteKey: import.meta.env.VITE_RECAPTCHA_SITE_KEY })
   .component('v-icon', OhVueIcon)
   .mount('#app')

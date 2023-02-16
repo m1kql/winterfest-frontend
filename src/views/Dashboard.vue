@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <div class="dashboard">
+  <div class="dashboard px-6">
     <div class="container mx-auto py-12">
       <div class="flex flex-row pb-12">
         <div class="profile relative">
@@ -28,16 +28,17 @@
       </div>
       <div class="pt-4 pb-8 flex flex-row align-center">
         <button
+          @click="navigateToSubmission"
           class="py-2 px-3 bg-gradient-to-r from-indigo-600 to-cyan-300 rounded-lg hover:from-cyan-300 hover:to-indigo-500 transition-all duration-600 ease-in-out scale-100 hover:scale-105 shadow-lg border-2 border-white hover:shadow-xl"
         >
           <h1 class="text-lg font-mono text-white font-semibold">Submit your solution</h1>
         </button>
-        <button class="px-7">
+        <div class="px-7">
           <h1 class="text-2xl font-mono">
             <!-- change to dyanmic -->
             Your points: <span class="text-3xl">0</span> points
           </h1>
-        </button>
+        </div>
       </div>
       <h1 class="text-slate-500 pb-4">
         Unsure about how this all works? Check out our
@@ -182,6 +183,7 @@ import {
   AccordionHeader,
   Badge,
 } from "flowbite-vue";
+import router from "@/router";
 
 export default {
   title: "Dashboard",
@@ -222,7 +224,11 @@ export default {
       return store.getters["problems/getAllProblems"];
     },
   },
-  methods: {},
+  methods: {
+    navigateToSubmission() {
+      router.push("/submit");
+    },
+  },
   components: {
     Navbar,
     Badge,

@@ -132,10 +132,12 @@ export default {
             </button>
           </li>
           <li>
-            <a href=""><v-icon class="hover:scale-125" name="io-logo-github"></v-icon></a>
+            <a href="https://github.com/m1iang/winterfest-frontend"
+              ><v-icon class="hover:scale-125" name="io-logo-github"></v-icon
+            ></a>
           </li>
           <li>
-            <a href=""
+            <a href="https://discord.gg/S9cPkxHJZh"
               ><v-icon
                 class="hover:scale-125 hover:text-[#7289da]"
                 name="bi-discord"

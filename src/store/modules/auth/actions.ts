@@ -23,51 +23,7 @@ export default {
       context.commit("SET_USER_UID", result.user.uid);
       context.commit("SET_USER_PHOTO_URL", result.user.photoURL);
       context.commit("SET_IS_LOGGED_IN", true);
-
-      const user = {
-        name: result.user.displayName,
-        email: result.user.email,
-        uid: result.user.uid,
-        problems_solved: 0,
-        problems_attempted: [
-          {
-            problem_id: 0,
-            problem_name: "",
-            problem_solved: false,
-            problem_attempted: false,
-            problem_attempted_count: 0,
-            submissions: [
-              {
-                submission_id: 0,
-                submission_code: "",
-                submission_status: "",
-                submission_time: "",
-                submission_language: "",
-                submission_time_taken: "",
-                submission_verdict: "",
-                submission_testcases_passed: 0,
-                submission_testcases_failed: 0,
-                submission_testcases_total: 0,
-              }
-            ]
-          }
-        ]
-      }
-
-      const db = useFirestore();
-      const users = useCollection(collection(db, "users"));
-      const currentUser = await getDoc(doc(db, "users", result.user.uid));
-      if (currentUser.exists()) {
-        console.log("User already exists");
-      } else {
-        await setDoc(doc(db, "users", result.user.uid), user).then(() => {
-          console.log("User created successfully");
-        }).catch((error) => {
-          console.log(error);
-        });
-      }
-
-
+      context.dispatch("createUser", result.user);
       router.push("/dashboard");
 
     }).catch(function (error) {

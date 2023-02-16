@@ -75,11 +75,15 @@ export default {
       </div>
       <div class="py-6">
         <div class="flex flex-row justify-center space-x-4">
-          <a href="" target="_blank">Made with love ❤️ by AYJ Coding Club.</a>
+          <a href="" target="_blank"
+            >Made with love ❤️ by AYJ Coding Club. Want to contribute? Fork us!</a
+          >
           <a href="" target="_blank"
             ><v-icon name="io-logo-github" scale="1.2"></v-icon
           ></a>
-          <a href="" target="_blank"><v-icon name="bi-discord" scale="1.2"></v-icon></a>
+          <a href="https://discord.gg/S9cPkxHJZh" target="_blank"
+            ><v-icon name="bi-discord" scale="1.2"></v-icon
+          ></a>
         </div>
       </div>
     </div>

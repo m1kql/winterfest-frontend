@@ -3,6 +3,8 @@
 <img alt="Website" src="https://img.shields.io/website?label=website&logo=vercel&style=plastic&up_message=online&url=https%3A%2F%2Fwinterfest-ayj.vercel.app">
 <img alt="GitHub" src="https://img.shields.io/github/license/m1iang/winterfest-frontend?style=plastic">
 
+![](winterfest-image.png)
+
 To get everything setup, jump to: [Vue 3 + Typescript + Vite](#vue-3-typescript-vite)
 
 

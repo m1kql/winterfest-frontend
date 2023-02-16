@@ -1,6 +1,7 @@
 import Home from '@/views/Home.vue';
 import Dashboard from '@/views/Dashboard.vue';
 import NotFound from '@/views/NotFound.vue';
+import SubmissionPage from '@/views/Submission.vue';
 
 const routes = [
   {
@@ -12,6 +13,14 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard,
+    meta: {
+      authRequired: true,
+    }
+  },
+  {
+    path: '/submit',
+    name: 'Submit',
+    component: SubmissionPage,
     meta: {
       authRequired: true,
     }
