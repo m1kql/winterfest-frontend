@@ -32,7 +32,7 @@
       <accordion-content>
         <div>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            You have until February 10th at 11:59 PM to submit your code.  
+            You have until February 20th at 11:59 PM to submit your code.  
           </p>
         </div>
       </accordion-content>
@@ -40,13 +40,35 @@
     <accordion-panel>
       <accordion-header>
         <h1 class="font-semibold text-2xl font-mono flex">
-            Why can't I submit?
+            What languages are supported?
         </h1>
       </accordion-header>
       <accordion-content>
         <div>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Submissions will be working very soon. Make sure to look out for announcements!
+            Supported langauges and versions: C++ 11, C++ 14, Java, Java 8, Python, Python 3, C, C#, JavaScript, Go, Kotlin, PHP, Ruby, Rust, Swift, Swift 4.1, and Haskell
+          </p>
+        </div>
+      </accordion-content>
+    </accordion-panel>
+    <accordion-panel>
+      <accordion-header>
+        <h1 class="font-semibold text-2xl font-mono flex">
+            How do submissions work?
+        </h1>
+      </accordion-header>
+      <accordion-content>
+        <div>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Write your solution code in any separate IDE, then click "Submit your solution" at the top of the dashboard:
+          </p>
+          <img style="border: 1px solid black; margin-top: 17px; margin-bottom: 17px;" src="@/assets/images/faq1.png" alt="Submit Solution Button image"/>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Then, drag in or upload your code file, select the langauge you used, and choose the appropriate problem: 
+          </p>
+          <img style="border:1px solid black; margin-top: 17px; margin-bottom: 17px;" src="@/assets/images/faq2.png" alt="Select problem and language image"/>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Then, click submit!
           </p>
         </div>
       </accordion-content>
@@ -60,7 +82,7 @@
       <accordion-content>
         <div>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Nope, just do as many problems as you can.
+            Nope, just do as many problems as you can :)
           </p>
         </div>
       </accordion-content>
@@ -102,8 +124,9 @@
       <accordion-content>
         <div>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Join our Discord and ask!  
+            Join our <a style="color: #7289d9" href="https://discord.gg/pVwaTma6g6">discord</a> and ask!  
           </p>
+          <img style="opacity:0.08; margin-top: 500px; scale: 1;" src="@/assets/images/hmm.png"/>
         </div>
       </accordion-content>
     </accordion-panel>

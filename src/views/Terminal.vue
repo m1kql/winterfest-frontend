@@ -43,7 +43,7 @@
                     join our
                     <span class="text-[#84ffff] hover:underline"
                       ><strong
-                        ><a href="https://discord.com/strongHJZh">discord</a></strong
+                        ><a href="https://discord.gg/pVwaTma6g6">discord</a></strong
                       ></span
                     >
                     🚀
@@ -56,7 +56,7 @@
               have any questions, feel free to reach out to us on discord!
               <br />
               <br />
-              <strong class="text-[#84ffff]">STARTING on Feb 6 - 10, 2023</strong>
+              <strong class="text-[#84ffff]">STARTING on Feb 6 - 20, 2023</strong>
             </samp>
           </div>
         </div>
