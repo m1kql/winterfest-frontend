@@ -20,13 +20,13 @@ addIcons(IoLogoGithub, IoMoon, BiApple, BiDiscord, HiSolidSparkles, BiArrowRight
 createApp(App)
   .mixin(titleMixin)
   .use(router)
-  .use(store)
-  .use(VueFire, {
-    firebaseApp: app,
-    modules: [
-      VueFireAuth(),
-    ],
-  })
-  .use(VueReCaptcha, { siteKey: import.meta.env.VITE_RECAPTCHA_SITE_KEY })
+  // .use(store)
+  // .use(VueFire, {
+  //   firebaseApp: app,
+  //   modules: [
+  //     VueFireAuth(),
+  //   ],
+  // })
+  // .use(VueReCaptcha, { siteKey: import.meta.env.VITE_RECAPTCHA_SITE_KEY })
   .component('v-icon', OhVueIcon)
   .mount('#app')
