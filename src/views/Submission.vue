@@ -197,23 +197,26 @@ export default {
       console.log("Success");
     },
     handleSubmit() {
-      const problemId = this.getSelectedProblem;
-      const language = this.getSelectedLang;
-      const id = this.userId;
-      // check if files has a File or Blob
-      const file = this.files[0] as File | Blob;
-      // upload to firebase storage
-      const storage = getStorage();
-      const submissionsRef = fireRef(
-        storage,
-        `submissions/${problemId.value}/${id}/${language.value}/main.${language.ext}`
-      );
-      uploadBytes(submissionsRef, file).then((snapshot) => {
-        console.log("Uploaded a blob or file!");
-        console.log(snapshot.metadata.name);
-        this.$router.push("/dashboard");
-      });
+      console.log("disabled");
     },
+    // handleSubmit() {
+    //   const problemId = this.getSelectedProblem;
+    //   const language = this.getSelectedLang;
+    //   const id = this.userId;
+    //   // check if files has a File or Blob
+    //   const file = this.files[0] as File | Blob;
+    //   // upload to firebase storage
+    //   const storage = getStorage();
+    //   const submissionsRef = fireRef(
+    //     storage,
+    //     `submissions/${problemId.value}/${id}/${language.value}/main.${language.ext}`
+    //   );
+    //   uploadBytes(submissionsRef, file).then((snapshot) => {
+    //     console.log("Uploaded a blob or file!");
+    //     console.log(snapshot.metadata.name);
+    //     this.$router.push("/dashboard");
+    //   });
+    // },
     // makeApiCall(sourceCode: string, language: string, problem: string, input: string) {},
     // updateUserFromAPIResponse(response: any) {
     //   console.log(response);
